@@ -31,13 +31,14 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{url}}/api/search",
+					"raw": "{{url}}/api/search/",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"api",
-						"search"
+						"search",
+						""
 					]
 				}
 			},
@@ -68,13 +69,19 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{url}}/api/search",
+					"raw": "{{url}}/api/search?tag={{tag}}",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"api",
 						"search"
+					],
+					"query": [
+						{
+							"key": "tag",
+							"value": "{{tag}}"
+						}
 					]
 				}
 			},
@@ -105,7 +112,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{url}}/api/search?query=demo",
+					"raw": "{{url}}/api/search?query={{string}}",
 					"host": [
 						"{{url}}"
 					],
@@ -116,7 +123,7 @@
 					"query": [
 						{
 							"key": "query",
-							"value": "demo"
+							"value": "{{string}}"
 						}
 					]
 				}
