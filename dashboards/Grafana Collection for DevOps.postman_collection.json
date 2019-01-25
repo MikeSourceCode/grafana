@@ -129,6 +129,45 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Dashboard Contents by UID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/dashboards/uid/{{uid}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"dashboards",
+						"uid",
+						"{{uid}}"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"auth": {
