@@ -7,167 +7,254 @@
 	},
 	"item": [
 		{
-			"name": "Dashboard List All Dashboards",
-			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": [
-						{
-							"key": "password",
-							"value": "test",
-							"type": "string"
+			"name": "Dashboards",
+			"item": [
+				{
+					"name": "Dashboard List All Dashboards",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "test",
+									"type": "string"
+								}
+							]
 						},
-						{
-							"key": "username",
-							"value": "test",
-							"type": "string"
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/search/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"search",
+								""
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
+				{
+					"name": "Dashboard Search by Tag",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "test",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/search?tag={{tag}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"search"
+							],
+							"query": [
+								{
+									"key": "tag",
+									"value": "{{tag}}"
+								}
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{url}}/api/search/",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"api",
-						"search",
-						""
-					]
+				{
+					"name": "Dashboard Search by String",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "test",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/search?query={{string}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "{{string}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dashboard Contents by UID",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "test",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/dashboards/uid/{{uid}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"dashboards",
+								"uid",
+								"{{uid}}"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Dashboard Search by Tag",
-			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": [
-						{
-							"key": "password",
-							"value": "test",
-							"type": "string"
+			"name": "Orgs",
+			"item": [
+				{
+					"name": "Orgs Change to Org",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "test",
+									"type": "string"
+								}
+							]
 						},
-						{
-							"key": "username",
-							"value": "test",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{url}}/api/search?tag={{tag}}",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"api",
-						"search"
-					],
-					"query": [
-						{
-							"key": "tag",
-							"value": "{{tag}}"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Dashboard Search by String",
-			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": [
-						{
-							"key": "password",
-							"value": "test",
-							"type": "string"
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
 						},
-						{
-							"key": "username",
-							"value": "test",
-							"type": "string"
+						"url": {
+							"raw": "{{url}}/api/user/using/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"using",
+								"1"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{url}}/api/search?query={{string}}",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"api",
-						"search"
-					],
-					"query": [
-						{
-							"key": "query",
-							"value": "{{string}}"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Dashboard Contents by UID",
-			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": [
-						{
-							"key": "password",
-							"value": "test",
-							"type": "string"
+				{
+					"name": "Orgs List All",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "test",
+									"type": "string"
+								}
+							]
 						},
-						{
-							"key": "username",
-							"value": "test",
-							"type": "string"
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/search/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"search",
+								""
+							]
 						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{url}}/api/dashboards/uid/{{uid}}",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"api",
-						"dashboards",
-						"uid",
-						"{{uid}}"
-					]
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	],
 	"auth": {
