@@ -17,12 +17,12 @@
 							"basic": [
 								{
 									"key": "password",
-									"value": "test",
+									"value": "{{password}}",
 									"type": "string"
 								},
 								{
 									"key": "username",
-									"value": "test",
+									"value": "{{user}}",
 									"type": "string"
 								}
 							]
@@ -55,12 +55,12 @@
 							"basic": [
 								{
 									"key": "password",
-									"value": "test",
+									"value": "{{password}}",
 									"type": "string"
 								},
 								{
 									"key": "username",
-									"value": "test",
+									"value": "{{user}}",
 									"type": "string"
 								}
 							]
@@ -98,12 +98,12 @@
 							"basic": [
 								{
 									"key": "password",
-									"value": "test",
+									"value": "{{password}}",
 									"type": "string"
 								},
 								{
 									"key": "username",
-									"value": "test",
+									"value": "{{user}}",
 									"type": "string"
 								}
 							]
@@ -141,12 +141,12 @@
 							"basic": [
 								{
 									"key": "password",
-									"value": "test",
+									"value": "{{password}}",
 									"type": "string"
 								},
 								{
 									"key": "username",
-									"value": "test",
+									"value": "{{user}}",
 									"type": "string"
 								}
 							]
@@ -185,12 +185,12 @@
 							"basic": [
 								{
 									"key": "password",
-									"value": "test",
+									"value": "{{password}}",
 									"type": "string"
 								},
 								{
 									"key": "username",
-									"value": "test",
+									"value": "{{user}}",
 									"type": "string"
 								}
 							]
@@ -224,12 +224,12 @@
 							"basic": [
 								{
 									"key": "password",
-									"value": "test",
+									"value": "{{password}}",
 									"type": "string"
 								},
 								{
 									"key": "username",
-									"value": "test",
+									"value": "{{user}}",
 									"type": "string"
 								}
 							]
