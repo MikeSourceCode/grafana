@@ -217,7 +217,7 @@
 					"response": []
 				},
 				{
-					"name": "Orgs List All",
+					"name": "Orgs List Current",
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -241,13 +241,51 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/api/search/",
+							"raw": "{{url}}/api/org/",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
-								"search",
+								"org",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Orgs List All",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{admin-password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{admin-user}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/orgs/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"orgs",
 								""
 							]
 						}
@@ -284,19 +322,98 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/api/search?tag={{tag}}",
+							"raw": "{{url}}/api/alerts/",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
-								"search"
-							],
-							"query": [
+								"alerts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alert Details",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
 								{
-									"key": "tag",
-									"value": "{{tag}}"
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{user}}",
+									"type": "string"
 								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/alerts/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"alerts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alert Pause by Id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{user}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"paused\": false\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/alerts/1/pause",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"alerts",
+								"1",
+								"pause"
 							]
 						}
 					},
